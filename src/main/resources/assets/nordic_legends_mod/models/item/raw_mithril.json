@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures" : {
+    "layer0" : "nordic_legends_mod:item/raw_mithril"
+   }
+}
