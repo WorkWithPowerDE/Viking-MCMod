@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 125,
+  "experience": 5,
+  "group": "mithril",
+  "ingredient": {
+    "item": "nordic_legends_mod:raw_mithril"
+  },
+  "result": {
+    "id": "nordic_legends_mod:mithril_nugget"
+  }
+}

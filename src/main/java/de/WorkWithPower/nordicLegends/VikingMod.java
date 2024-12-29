@@ -3,7 +3,6 @@ package de.WorkWithPower.nordicLegends;
 import de.WorkWithPower.nordicLegends.block.ModBlocks;
 import de.WorkWithPower.nordicLegends.item.ModCreativeModeTabs;
 import de.WorkWithPower.nordicLegends.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -83,7 +82,7 @@ public class VikingMod
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.MITHRIL_ORE);
+            event.accept(ModBlocks.MITHRIL_DEEPSLATE_ORE);
             event.accept(ModBlocks.MITHRIL_BLOCK);
         }
     }
