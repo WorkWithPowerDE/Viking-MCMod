@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(VikingMod.MOD_ID);
 
-    public static final DeferredBlock<Block> MITHRIL_ORE = registerBlock("mithril_ore",
+    public static final DeferredBlock<Block> MITHRIL_DEEPSLATE_ORE = registerBlock("mithril_ore",
             () -> new DropExperienceBlock(UniformInt.of(50,100), BlockBehaviour.Properties.of()
                     .strength(4f)
                     .requiresCorrectToolForDrops()

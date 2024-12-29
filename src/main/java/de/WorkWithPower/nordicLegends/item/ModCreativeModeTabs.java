@@ -32,7 +32,7 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(VikingMod.MOD_ID, "nordic_legends_items"))
                     .title(Component.translatable("creativetab.nordic_legends_mod.blocks"))
                     .displayItems((itemDisplayParameters ,output) ->{
-                        output.accept(ModBlocks.MITHRIL_ORE);
+                        output.accept(ModBlocks.MITHRIL_DEEPSLATE_ORE);
                         output.accept(ModBlocks.MITHRIL_BLOCK);
                     })
                 .build());
