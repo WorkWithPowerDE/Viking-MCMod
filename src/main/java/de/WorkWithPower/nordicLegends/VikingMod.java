@@ -1,6 +1,6 @@
 package de.WorkWithPower.nordicLegends;
 
-import de.WorkWithPower.nordicLegends.block.ModBlocks;
+import de.WorkWithPower.nordicLegends.block.register.ModBlocks;
 import de.WorkWithPower.nordicLegends.item.ModCreativeModeTabs;
 import de.WorkWithPower.nordicLegends.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -52,9 +52,6 @@ public class VikingMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -72,20 +69,6 @@ public class VikingMod
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.MITHRIL);
-            event.accept(ModItems.RAW_MITHRIL);
-            event.accept(ModItems.MITHRIL_NUGGET);
-        }
-
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.MITHRIL_DEEPSLATE_ORE);
-            event.accept(ModBlocks.MITHRIL_BLOCK);
-        }
-    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

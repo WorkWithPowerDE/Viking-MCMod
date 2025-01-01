@@ -1,12 +1,12 @@
 package de.WorkWithPower.nordicLegends.datagen;
 
 import de.WorkWithPower.nordicLegends.VikingMod;
-import de.WorkWithPower.nordicLegends.block.ModBlocks;
+import de.WorkWithPower.nordicLegends.block.register.ModBlocks;
 import de.WorkWithPower.nordicLegends.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 
@@ -45,6 +45,15 @@ public class ModRecipeProvider extends RecipeProvider {
         oreSmelting(recipeOutput, MITHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MITHRIL_NUGGET.get(),0.75f,600, "mithril");
         oreBlasting(recipeOutput, MITHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MITHRIL_NUGGET.get(),1f,450, "mithril");
 
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MET.get())
+                .pattern("HGG")
+                .pattern("SRR")
+                .pattern("   ")
+                .define('H', ModItems.HORN.get())
+                .define('G', Items.HONEY_BOTTLE)
+                .define('S', Items.SWEET_BERRIES)
+                .unlockedBy("has_horn", has(ModItems.HORN));
     }
 
     protected static void oreSmelting(

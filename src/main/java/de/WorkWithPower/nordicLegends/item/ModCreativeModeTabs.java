@@ -1,7 +1,7 @@
 package de.WorkWithPower.nordicLegends.item;
 
 import de.WorkWithPower.nordicLegends.VikingMod;
-import de.WorkWithPower.nordicLegends.block.ModBlocks;
+import de.WorkWithPower.nordicLegends.block.register.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +23,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MITHRIL);
                         output.accept(ModItems.RAW_MITHRIL);
                         output.accept(ModItems.MITHRIL_NUGGET);
+                        output.accept(ModItems.HORN);
+                        output.accept(ModItems.MET);
+                        output.accept(ModItems.FIREWOOD);
                     })
                 .build());
 
@@ -34,6 +37,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters ,output) ->{
                         output.accept(ModBlocks.MITHRIL_DEEPSLATE_ORE);
                         output.accept(ModBlocks.MITHRIL_BLOCK);
+                        output.accept(ModBlocks.BREWING_BARREL);
                     })
                 .build());
 

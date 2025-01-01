@@ -1,7 +1,7 @@
 package de.WorkWithPower.nordicLegends.datagen;
 
 import de.WorkWithPower.nordicLegends.VikingMod;
-import de.WorkWithPower.nordicLegends.block.ModBlocks;
+import de.WorkWithPower.nordicLegends.block.register.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -22,6 +22,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MITHRIL_BLOCK.get())
                 .add(ModBlocks.MITHRIL_DEEPSLATE_ORE.get());
 
-
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.BREWING_BARREL.get());
     }
 }

@@ -6,6 +6,10 @@ Ore:
 - Uru
 - Elementum
 
+Crafting Items:
+-
+- Horn (Bull-drop)
+
 Items:
 - 
 - Nuggets
@@ -13,6 +17,11 @@ Items:
 - Blocks
 - firewood
 - Horn (loud tone all over the server)
+- 
+
+Food:
+-
+- Met
 
 Mechanic:
 -

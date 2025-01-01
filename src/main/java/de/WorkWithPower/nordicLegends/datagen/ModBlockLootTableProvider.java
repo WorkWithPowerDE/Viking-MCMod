@@ -1,6 +1,6 @@
 package de.WorkWithPower.nordicLegends.datagen;
 
-import de.WorkWithPower.nordicLegends.block.ModBlocks;
+import de.WorkWithPower.nordicLegends.block.register.ModBlocks;
 import de.WorkWithPower.nordicLegends.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -18,6 +18,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.MITHRIL_BLOCK.get());
+        dropSelf(ModBlocks.BREWING_BARREL.get());
 
 
         add(ModBlocks.MITHRIL_DEEPSLATE_ORE.get(),

@@ -5,7 +5,16 @@
 
   "block.nordic_legends_mod.mithril_ore": "Mithril Ore",
   "block.nordic_legends_mod.mithril_block": "Mithril Block",
+  "block.nordic_legends_mod.brewing_barrel": "Brewing Barrel",
+
+  "item.nordic_legends_mod.horn": "Horn",
+  "item.nordic_legends_mod.met": "Met",
+
+  "item.nordic_legends_mod.firewood":  "Firewood",
 
   "creativetab.nordic_legends_mod.blocks": "Nordic Legends: Viking Blocks",
-  "creativetab.nordic_legends_mod.items": "Nordic Legends: Viking Items"
+  "creativetab.nordic_legends_mod.items": "Nordic Legends: Viking Items",
+
+  "tooltip.nordic_legends_mod.raw_mithril.tooltip": "Is this thing smelting at all?",
+  "tooltip.nordic_legends_mod.met.tooltip": "The drink for gods. But don't throw up"
 }

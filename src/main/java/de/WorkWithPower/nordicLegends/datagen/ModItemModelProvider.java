@@ -16,5 +16,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_MITHRIL.get());
         basicItem(ModItems.MITHRIL_NUGGET.get());
         basicItem(ModItems.MITHRIL.get());
+        basicItem(ModItems.HORN.get());
+        basicItem(ModItems.MET.get());
+        basicItem(ModItems.FIREWOOD.get());
     }
 }

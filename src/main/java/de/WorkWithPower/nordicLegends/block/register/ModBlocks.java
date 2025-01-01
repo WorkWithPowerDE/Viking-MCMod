@@ -1,6 +1,7 @@
-package de.WorkWithPower.nordicLegends.block;
+package de.WorkWithPower.nordicLegends.block.register;
 
 import de.WorkWithPower.nordicLegends.VikingMod;
+import de.WorkWithPower.nordicLegends.block.custom.BrewingBarrel;
 import de.WorkWithPower.nordicLegends.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -31,12 +32,18 @@ public class ModBlocks {
                     .sound(SoundType.STONE)));
 
 
+    public static final DeferredBlock<Block> BREWING_BARREL = registerBlock("brewing_barrel",
+            () -> new BrewingBarrel(BlockBehaviour.Properties.of()
+                    .strength(2.5f)
+                    .sound(SoundType.WOOD)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
+
+
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
