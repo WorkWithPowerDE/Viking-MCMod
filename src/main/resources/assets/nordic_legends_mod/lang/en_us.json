@@ -16,5 +16,9 @@
   "creativetab.nordic_legends_mod.items": "Nordic Legends: Viking Items",
 
   "tooltip.nordic_legends_mod.raw_mithril.tooltip": "Is this thing smelting at all?",
-  "tooltip.nordic_legends_mod.met.tooltip": "The drink for gods. But don't throw up"
+  "tooltip.nordic_legends_mod.met.tooltip": "The drink for gods. But don't throw up",
+
+  "block.nordic_legends_mod.elderwood_planks": "Elderwood Planks",
+  "block.nordic_legends_mod.elderwood_stairs": "Elderwood Stairs",
+  "block.nordic_legends_mod.elderwood_slab": "Elderwood Slab"
 }

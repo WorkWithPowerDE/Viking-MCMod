@@ -6,9 +6,7 @@ import de.WorkWithPower.nordicLegends.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -37,12 +35,29 @@ public class ModBlocks {
                     .strength(2.5f)
                     .sound(SoundType.WOOD)));
 
-    public static final DeferredBlock<Block> ELDERWOOD_PLANKS = registerBlock("elderwood_blank",
+
+    //Elderwood
+    public static final DeferredBlock<Block> ELDERWOOD_LOGS = registerBlock("elderwood_log",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.WOOD)
+                    ));
+
+    public static final DeferredBlock<Block> ELDERWOOD_PLANKS = registerBlock("elderwood_planks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f)
                     .sound(SoundType.WOOD)));
 
+    public static final DeferredBlock<Block> ELDERWOOD_STAIRS = registerBlock("elderwood_stairs",
+            () -> new StairBlock(ModBlocks.ELDERWOOD_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(4f)));
 
+    public static final DeferredBlock<Block> ELDERWOOD_SLAB = registerBlock("elderwood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f)));
+
+
+
+    /** Functions*/
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

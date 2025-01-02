@@ -21,7 +21,7 @@ public class ModBiomeModifiers {
         var biomes = context.lookup(Registries.BIOME);
 
         context.register(ADD_MITRHIL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.MANGROVE_SWAMP), biomes.getOrThrow(Biomes.WINDSWEPT_HILLS)),
+                HolderSet.direct(biomes.getOrThrow(Biomes.OCEAN), biomes.getOrThrow(Biomes.WARM_OCEAN)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MITRHIL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));

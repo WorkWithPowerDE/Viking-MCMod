@@ -38,6 +38,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MITHRIL_DEEPSLATE_ORE);
                         output.accept(ModBlocks.MITHRIL_BLOCK);
                         output.accept(ModBlocks.BREWING_BARREL);
+                        output.accept(ModBlocks.ELDERWOOD_LOGS);
+                        output.accept(ModBlocks.ELDERWOOD_PLANKS);
+                        output.accept(ModBlocks.ELDERWOOD_SLAB);
+                        output.accept(ModBlocks.ELDERWOOD_STAIRS);
                     })
                 .build());
 

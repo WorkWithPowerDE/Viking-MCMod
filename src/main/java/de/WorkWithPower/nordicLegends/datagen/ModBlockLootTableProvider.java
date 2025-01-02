@@ -30,7 +30,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.MITHRIL_BLOCK.get());
         dropSelf(ModBlocks.BREWING_BARREL.get());
+
+        dropSelf(ModBlocks.ELDERWOOD_LOGS.get());
         dropSelf(ModBlocks.ELDERWOOD_PLANKS.get());
+        dropSelf(ModBlocks.ELDERWOOD_STAIRS.get());
+        add(ModBlocks.ELDERWOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ELDERWOOD_SLAB.get()));
 
         add(ModBlocks.MITHRIL_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.MITHRIL_DEEPSLATE_ORE.get(), ModItems.RAW_MITHRIL.get(),1,3));
