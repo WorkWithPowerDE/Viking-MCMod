@@ -37,6 +37,12 @@ public class ModBlocks {
                     .strength(2.5f)
                     .sound(SoundType.WOOD)));
 
+    public static final DeferredBlock<Block> ELDERWOOD_PLANKS = registerBlock("elderwood_blank",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
