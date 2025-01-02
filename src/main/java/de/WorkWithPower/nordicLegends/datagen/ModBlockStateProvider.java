@@ -24,8 +24,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BREWING_BARREL);
 
         blockWithItem(ModBlocks.ELDERWOOD_PLANKS);
-        stairsBlock(((StairBlock) ModBlocks.ELDERWOOD_PLANKS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
-        slabBlock(((SlabBlock) ModBlocks.ELDERWOOD_PLANKS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
+        stairsBlock(((StairBlock) ModBlocks.ELDERWOOD_STAIRS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.ELDERWOOD_SLAB.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
 
         blockItem(ModBlocks.ELDERWOOD_STAIRS);
         blockItem(ModBlocks.ELDERWOOD_SLAB);
