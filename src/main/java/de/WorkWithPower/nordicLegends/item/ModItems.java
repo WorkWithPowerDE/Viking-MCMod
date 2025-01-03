@@ -4,10 +4,7 @@ import de.WorkWithPower.nordicLegends.VikingMod;
 import de.WorkWithPower.nordicLegends.item.custom.FuelItem;
 import de.WorkWithPower.nordicLegends.item.custom.MetItem;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -40,6 +37,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> FIREWOOD = ITEMS.register("firewood",
             () -> new FuelItem(new Item.Properties(), 1200));
+
+    public static final DeferredItem<Item> MITHRIL_SWORD = ITEMS.register("mithril_sword",
+            () -> new SwordItem());
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

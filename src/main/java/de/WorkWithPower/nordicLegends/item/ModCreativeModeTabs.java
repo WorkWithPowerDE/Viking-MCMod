@@ -45,6 +45,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ELDERWOOD_STAIRS);
                         output.accept(ModBlocks.ELDERWOOD_PRESSURE_PLATE);
                         output.accept(ModBlocks.ELDERWOOD_BUTTON);
+                        output.accept(ModBlocks.ELDERWOOD_FENCE_GATE);
+                        output.accept(ModBlocks.ELDERWOOD_FENCE);
+                        output.accept(ModBlocks.ELDERWOOD_WALL);
+                        output.accept(ModBlocks.ELDERWOOD_DOOR);
+                        output.accept(ModBlocks.ELDERWOOD_TRAPDOOR);
 
                     })
                 .build());

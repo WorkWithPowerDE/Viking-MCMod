@@ -6,6 +6,7 @@ import de.WorkWithPower.nordicLegends.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -28,5 +29,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(ModTags.Blocks.BREWING_BARRELS)
                 .add(ModBlocks.BREWING_BARREL.get());
+
+        tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.ELDERWOOD_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.ELDERWOOD_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.ELDERWOOD_WALL.get());
     }
 }

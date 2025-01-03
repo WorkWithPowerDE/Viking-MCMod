@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -58,10 +59,24 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ELDERWOOD_PRESSURE_PLATE = registerBlock("elderwood_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.of().strength(2f)));
+
     public static final DeferredBlock<Block> ELDERWOOD_BUTTON = registerBlock("elderwood_button",
             () -> new ButtonBlock(BlockSetType.DARK_OAK,10,BlockBehaviour.Properties.of().strength(2f).noCollission()));
 
+    public static final DeferredBlock<Block> ELDERWOOD_FENCE = registerBlock("elderwood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
 
+    public static final DeferredBlock<Block> ELDERWOOD_FENCE_GATE = registerBlock("elderwood_fence_gate",
+            () -> new FenceGateBlock(WoodType.DARK_OAK, BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final DeferredBlock<Block> ELDERWOOD_WALL = registerBlock("elderwood_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final DeferredBlock<Block> ELDERWOOD_DOOR = registerBlock("elderwood_door",
+            () -> new DoorBlock(BlockSetType.DARK_OAK,BlockBehaviour.Properties.of().strength(2f).noOcclusion()));
+
+    public static final DeferredBlock<Block> ELDERWOOD_TRAPDOOR = registerBlock("elderwood_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.DARK_OAK,BlockBehaviour.Properties.of().strength(2f).noOcclusion()));
 
     /** Functions*/
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){

@@ -68,18 +68,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.ELDERWOOD_LOGS)
                 .unlockedBy("has_elderwood_logs", has(ModBlocks.ELDERWOOD_LOGS)).save(recipeOutput);
 
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELDERWOOD_SLAB, ModBlocks.ELDERWOOD_PLANKS.get());
+        pressurePlate(recipeOutput, ModBlocks.ELDERWOOD_PRESSURE_PLATE.get(), ModBlocks.ELDERWOOD_PLANKS.get());
+
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELDERWOOD_WALL, ModBlocks.ELDERWOOD_PLANKS.get());
+
         stairBuilder(ModBlocks.ELDERWOOD_STAIRS.get(), Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
                 .group("elderwood")
                 .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
                 .save(recipeOutput);
 
-        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELDERWOOD_SLAB, ModBlocks.ELDERWOOD_PLANKS.get());
+
 
         buttonBuilder(ModBlocks.ELDERWOOD_BUTTON.get(),Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
                 .group("elderwood")
                 .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
                 .save(recipeOutput);;
-        pressurePlate(recipeOutput, ModBlocks.ELDERWOOD_PRESSURE_PLATE.get(), ModBlocks.ELDERWOOD_PLANKS.get());
+
+        fenceGateBuilder(ModBlocks.ELDERWOOD_FENCE_GATE.get(), Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .group("elderwood")
+                .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .save(recipeOutput);
+        fenceBuilder(ModBlocks.ELDERWOOD_FENCE.get(), Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .group("elderwood")
+                .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .save(recipeOutput);
+        doorBuilder(ModBlocks.ELDERWOOD_DOOR.get(), Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .group("elderwood")
+                .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .save(recipeOutput);
+        trapdoorBuilder(ModBlocks.ELDERWOOD_TRAPDOOR.get(), Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .group("elderwood")
+                .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .save(recipeOutput);
+
 
     }
 

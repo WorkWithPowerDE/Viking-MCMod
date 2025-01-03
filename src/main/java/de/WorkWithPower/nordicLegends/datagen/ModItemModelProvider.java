@@ -25,10 +25,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FIREWOOD.get());
 
         buttonItem(ModBlocks.ELDERWOOD_BUTTON, ModBlocks.ELDERWOOD_PLANKS);
+        fenceItem(ModBlocks.ELDERWOOD_FENCE, ModBlocks.ELDERWOOD_PLANKS);
+        wallItem(ModBlocks.ELDERWOOD_WALL, ModBlocks.ELDERWOOD_PLANKS);
+
+        basicItem(ModBlocks.ELDERWOOD_DOOR.asItem());
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock){
         this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
                 .texture("texture", ResourceLocation.fromNamespaceAndPath(VikingMod.MOD_ID, "block/" + baseBlock.getId().getPath()));
     }
+    public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock){
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(VikingMod.MOD_ID, "block/" + baseBlock.getId().getPath()));
+    }
+    public void wallItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock){
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(VikingMod.MOD_ID, "block/" + baseBlock.getId().getPath()));
+    }
+
 }

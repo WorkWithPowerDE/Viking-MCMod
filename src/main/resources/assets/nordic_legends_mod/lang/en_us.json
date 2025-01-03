@@ -23,5 +23,10 @@
   "block.nordic_legends_mod.elderwood_stairs": "Elderwood Stairs",
   "block.nordic_legends_mod.elderwood_slab": "Elderwood Slab",
   "block.nordic_legends_mod.elderwood_pressure_plate": "Elderwood Pressure Plate",
-  "block.nordic_legends_mod.elderwood_button": "Elderwood Button"
+  "block.nordic_legends_mod.elderwood_button": "Elderwood Button",
+  "block.nordic_legends_mod.elderwood_fence": "Elderwood Fence",
+  "block.nordic_legends_mod.elderwood_fence_gate": "Elderwood Fence Gate",
+  "block.nordic_legends_mod.elderwood_wall": "Elderwood Wall",
+  "block.nordic_legends_mod.elderwood_door": "Elderwood Door",
+  "block.nordic_legends_mod.elderwood_trapdoor": "Elderwood Trapdoor"
 }
