@@ -75,6 +75,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ELDERWOOD_SLAB, ModBlocks.ELDERWOOD_PLANKS.get());
 
+        buttonBuilder(ModBlocks.ELDERWOOD_BUTTON.get(),Ingredient.of(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .group("elderwood")
+                .unlockedBy("has_elderwood_planks", has(ModBlocks.ELDERWOOD_PLANKS.get()))
+                .save(recipeOutput);;
+        pressurePlate(recipeOutput, ModBlocks.ELDERWOOD_PRESSURE_PLATE.get(), ModBlocks.ELDERWOOD_PLANKS.get());
+
     }
 
     protected static void oreSmelting(

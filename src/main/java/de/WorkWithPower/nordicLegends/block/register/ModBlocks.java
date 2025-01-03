@@ -8,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -54,6 +55,11 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ELDERWOOD_SLAB = registerBlock("elderwood_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final DeferredBlock<Block> ELDERWOOD_PRESSURE_PLATE = registerBlock("elderwood_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<Block> ELDERWOOD_BUTTON = registerBlock("elderwood_button",
+            () -> new ButtonBlock(BlockSetType.DARK_OAK,10,BlockBehaviour.Properties.of().strength(2f).noCollission()));
 
 
 

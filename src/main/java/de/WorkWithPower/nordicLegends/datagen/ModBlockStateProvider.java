@@ -3,9 +3,7 @@ package de.WorkWithPower.nordicLegends.datagen;
 import de.WorkWithPower.nordicLegends.VikingMod;
 import de.WorkWithPower.nordicLegends.block.register.ModBlocks;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -23,12 +21,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MITHRIL_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.BREWING_BARREL);
 
+        blockWithItem(ModBlocks.ELDERWOOD_LOGS);
         blockWithItem(ModBlocks.ELDERWOOD_PLANKS);
         stairsBlock(((StairBlock) ModBlocks.ELDERWOOD_STAIRS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.ELDERWOOD_SLAB.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
-
         blockItem(ModBlocks.ELDERWOOD_STAIRS);
         blockItem(ModBlocks.ELDERWOOD_SLAB);
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.ELDERWOOD_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
+        buttonBlock((ButtonBlock) ModBlocks.ELDERWOOD_BUTTON.get(), blockTexture(ModBlocks.ELDERWOOD_PLANKS.get()));
+        blockItem(ModBlocks.ELDERWOOD_PRESSURE_PLATE);
+
     }
 
     private void blockItem(DeferredBlock<Block> deferredBlock) {
